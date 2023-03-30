@@ -1,30 +1,44 @@
-#inlude "main.h"
+#include "main.h"                                                                                                                    
 
+                                                                                                                                     
 
-/**
- * _strncat - concatenate strings, defining the size of second string.
- * @dest: string with concatenation
- * @src: string to be concatenated
- * @n: size of second string
- * Return: Always 0.
- */
-char *_strncat(char *dest, char *src, int n)
-{
-	int lengthD, lengthS;
+/**                                                                                                                                  
 
-	lengthD = 0;
-	lengthS = 0;
+ * strcat - Concatenates the string pointed to by @src, including the x                                                    
 
-	while (*(dest + lengthD) != '\0')
-		lengthD++;
+ *          null byte, to the end of the string pointed to by @dest.                                                                
 
-	while (*(src + lengthS) != '\0' && lengthD < 97 && lengthS < n)
-	{
-		*(dest + lengthD) = *(src + lengthS);
-		lengthD++;
-		lengthS++;
-	}
-	*(dest + lengthD) = '\0';
-	return (dest);
+ * @dest: A pointer to the string to be concatenated upon.                                                                          
+
+ * @src: The source string to be appended to @dest.                                                                                  
+
+ *                                                                                                                                  
+
+ * Return: A pointer to the destination string @dest.                                                                                
+
+ */                                                                                                                                  
+
+char *_strcat(char *dest, const char *src)                                                                                            
+
+{                                                                                                                                    
+
+        int index = 0, dest_len = 0;                                                                                                
+
+                                                                                                                                     
+
+        while (dest[index++])                                                                                                        
+
+                dest_len++;                                                                                                          
+
+                                                                                                                                     
+
+        for (index = 0; src[index]; index++)                                                                                        
+
+                dest[dest_len++] = src[index];                                                                                      
+
+                                                                                                                                     
+
+        return (dest);                                                                                                              
+
 }
 
