@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * create_ array - create   an array of char
- * and initialize it with
- * speciic char
- * @size: size of the array
- * @c: the value of the array
- * return: Null if the memory fail
- * otherwise: 0
+ * create_array - create an array of and initialize it with a specific value
+ * @size: the  size of the array
+ * @c: the value  which the array should be initialized
+ *
+ * Return: NULL if size is 0 or memory allocation fails,
+ * otherwise 0
  */
 char *create_array(unsigned int size, char c)
 {
