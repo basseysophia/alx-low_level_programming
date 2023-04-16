@@ -1,32 +1,31 @@
 #inlcude "main.h"
 
+#include <stdio.h>
+
 /**
- * prime2 - Makes possible to evaluate from 1 to n
- * @a: same number as n
- * @b: number that iterates from 1 to n
+ * main - check code.
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0.
  */
-int prime2(int a, int b)
+int main(void)
 {
-	if (a == b)
-		return (1);
-	else if (a % b == 0)
-		return (0);
-	return (prime2(a, b + 1));
-}
-/**
- * is_prime_number - checks if a number is prime
- * @n: Number Integer
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int is_prime_number(int n)
-{
-	if (n <= 1)
-		return (0);
-	return (prime2(n, 2));
-}
+	int r;
+
+	r = is_prime_number(1);
+	printf("%d\n", r);
+	r = is_prime_number(1024);
+	printf("%d\n", r);
+	r = is_prime_number(16);
+	printf("%d\n", r);
+	r = is_prime_number(17);
+	printf("%d\n", r);
+	r = is_prime_number(25);
+	printf("%d\n", r);
+	r = is_prime_number(-1);
+	printf("%d\n", r);
+	r = is_prime_number(113);
+	printf("%d\n", r);
+	r = is_prime_number(7919);
+	printf("%d\n", r);
+	return (0);
 
