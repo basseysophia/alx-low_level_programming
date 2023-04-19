@@ -1,7 +1,4 @@
-es (23 sloc)  599 Bytes
- 
-
-#include "function_pointers.h"
+ #include "function_pointers.h"
 /**
  * int_index - this functions find the index of a int
 (* a blank line
